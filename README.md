@@ -22,7 +22,7 @@ An interactive web dashboard built with **Flask**, **Plotly**, and **Pandas** to
 
 ## ⚙️ Installation & Local Setup  
 1. Clone this repository  
-   git clone https://github.com/your-username/uber-trips-dashboard.git  
+   git clone https://github.com/afridmd12/uber_trip_analysis.git  
    cd uber-trips-dashboard  
 
 2. Create virtual environment & activate  
