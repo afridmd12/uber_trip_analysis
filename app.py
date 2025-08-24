@@ -17,6 +17,8 @@ if df["day_of_week"].dtype == object:
 if df["month"].dtype == object:
     df["month"] = df["month"].str.strip().str.title()
 
+
+# ---- Routes -----------------------------------------------------------------
 @app.route("/", methods=["GET"])
 def home():
     base_numbers = sorted(df["dispatching_base_number"].dropna().unique())
@@ -34,6 +36,7 @@ def home():
         days=days,
         months=months
     )
+
 
 @app.route("/results", methods=["POST"])
 def results():
@@ -105,5 +108,12 @@ def results():
         graph1=graph1, graph2=graph2, graph3=graph3, empty=False
     )
 
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
+
+# ---- Run locally ------------------------------------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
